@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+.container {
+    display: flex;
+}
+
+sidebar {
+    width: 45px;
+    background: #f7f7f7;
+    position: static;
+    border-right: solid 1px #d4d4d4;
+    transition: 1s cubic-bezier(0.18, 0.89, 0.52, 1.02);
+    height: 100vh;
+
+    width: 220px;
+    box-shadow: 8px 1px 15px #dbdbdb;
+}
+/* sidebar:hover {
+    width: 220px;
+    box-shadow: 8px 1px 15px #dbdbdb;
+} */
+sidebar ul
+{
+  margin: 0;
+  padding: 0 9px;
+}
+
+sidebar ul li
+{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+sidebar ul li p {
+  text-decoration: none;
+  color: #313131;
+  width: 100%;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+sidebar ul li a
+{
+  text-decoration: none;
+  color: #313131;
+  height: 18px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+  display: flex;
+  padding: 3px 0;
+}
+
+sidebar ul li a:hover {
+  color: #242424;
+}
+
+sidebar ul li
+{
+/*   border: 1px solid #000; */
+  border-radius: 6px;
+  padding: 3px;
+  transition: .3s ease-in-out;
+  margin: 7px 0;
+}
+
+sidebar ul li:hover
+{
+  background: #5c5b5b2a;
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+    margin: 2px;
+    width: 100%;
+    padding: 0 10px;
+}
