@@ -6,20 +6,24 @@ body {
 }
 
 sidebar {
+  height: 100%;
     width: 45px;
     background: #f7f7f7;
     position: static;
     border-right: solid 1px #d4d4d4;
-    transition: 1s cubic-bezier(0.18, 0.89, 0.52, 1.02);
-    height: 100vh;
+    transition: .5s cubic-bezier(0.18, 0.89, 0.52, 1.02);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    white-space: nowrap;
+    overflow-x: hidden;
 
+/* 
     width: 220px;
-    box-shadow: 8px 1px 15px #dbdbdb;
+    box-shadow: 8px 1px 15px #dbdbdb; */
 }
-/* sidebar:hover {
-    width: 220px;
-    box-shadow: 8px 1px 15px #dbdbdb;
-} */
+
 sidebar ul
 {
   margin: 0;
@@ -32,15 +36,19 @@ sidebar ul li
   display: flex;
   margin: 0;
   padding: 0;
+  height: 32px;
+}
+.bx {
+  padding: 3px 0;
 }
 
-sidebar ul li p {
+sidebar ul li span {
   text-decoration: none;
-  color: #313131;
   width: 100%;
-  font-size: 20px;
-  display: block;
+  font-size: 15px;
   text-align: center;
+  margin-left: 3px;
+  padding: 0 10px;
 }
 
 sidebar ul li a
@@ -48,7 +56,7 @@ sidebar ul li a
   text-decoration: none;
   color: #313131;
   height: 18px;
-  width: 100%;
+  width: 20px;
   font-size: 20px;
   line-height: 30px;
   display: block;

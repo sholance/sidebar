@@ -11,26 +11,64 @@
 <body>
     <div class="container">
         <!-- sidebar container -->
-        <sidebar>
+        <sidebar id="theSidebar" onmouseover="sidebarToggle()" onmouseout="sidebarToggle()">
             <div class="sidebar">
                 <ul>
                     <li><a href="#"><i class='bx bx-home-alt'></i>
+                        <span class="i-text"> home</span>
                         </a>
-                        <p class="i-text"> home tab</p>
                     </li>
-                    <li><a href="#"><i class='bx bxs-folder-open'></i></a></li>
-                    <li><a href="#"><i class='bx bx-library'></i></a></li>
-                    <li><a href="#"><i class='bx bx-bookmark-heart'></i></a></li>
-                    <li><a href="#"><i class='bx bxs-backpack'></i></a></li>
-                    <li><a href="#"><i class='bx bx-barcode-reader'></i></a></li>
-                    <li><a href="#"><i class='bx bx-log-in-circle'></i></a></li>
+                    <li><a href="#"><i class='bx bxs-folder-open'></i>
+                            <span class="i-text"> folders</span>
+                        </a></li>
+                    <li><a href="#"><i class='bx bx-library'></i>
+                            <span class="i-text"> libraries</span>
+                        </a></li>
+                    <li><a href="#"><i class='bx bx-bookmark-heart'></i>
+                            <span class="i-text"> bookmark</span>
+                        </a></li>
+                    <li><a href="#"><i class='bx bxs-backpack'></i>
+                            <span class="i-text"> backpack</span>
+                        </a></li>
+                    <li><a href="#"><i class='bx bx-barcode-reader'></i>
+                            <span class="i-text"> scan</span>
+                        </a></li>
+                    <li><a href="#"><i class='bx bx-log-in-circle'></i>
+                            <span class="i-text"> login</span>
+                        </a></li>
                 </ul>
             </div>
         </sidebar>
         <!-- main body content here -->
-    <main> 
+    <main id="mainPage">
         <p>main body is located here</p>
     </main>
     </div>
+    <script>
+        // setTimeout(sidebarToggle, 5000);
+        var small = true;
+
+        function sidebarToggle() {
+            if (small) {
+                console.log("sidebar is opening");
+
+                document.getElementById("theSidebar").style.width = "220px";
+
+                document.getElementById("theSidebar").style.boxShadow = "8px 1px 15px #dbdbdb";
+
+                document.getElementById("mainPage").style.marginLeft = "220px";
+                this.small = false;
+            } else {
+                console.log("sidebar is closing");
+
+                document.getElementById("theSidebar").style.width = "45px";
+
+                document.getElementById("theSidebar").style.boxShadow = "0 0 0 #ffffff";
+
+                document.getElementById("mainPage").style.marginLeft = "45px";
+                this.small = true;
+            }
+        }
+    </script>
 </body>
 </html>
